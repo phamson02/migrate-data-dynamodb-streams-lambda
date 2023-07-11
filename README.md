@@ -12,7 +12,7 @@ If the table has a large number of existing items, a Step Function is used to ma
 
 ## Repository Structure
 
-- `template.yaml`: This is the CloudFormation template that sets up the entire solution. It creates the necessary AWS resources, including the DynamoDB table, the Lambda function, and the Step Function.
+- `template.yaml`: This is the CloudFormation template that sets up the entire solution. It creates the necessary AWS resources, including the the Lambda function and the Step Function.
 
 - `index.py`: This is the code for the Lambda function. It is written in Python and uses the Boto3 library to interact with AWS services.
 
