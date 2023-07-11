@@ -2,6 +2,8 @@
 
 This repository provides a solution for migrating existing items in a DynamoDB table using AWS Step Functions, AWS Lambda, and DynamoDB Streams. The solution is designed to handle large DynamoDB tables and avoid timeouts that can occur when processing a large number of items. It also provides robust error handling and can recover from failures.
 
+This solution is based on this awesome work and blog post by [Dan Stanhope](https://dev.to/danstanhope/migrating-dynamodb-data-using-lamba-streams-2e3m).
+
 ## Overview
 
 The solution works by triggering a Lambda function to scan and update items with a new attribute `pre_existing_processed` in a DynamoDB table. The updates to the items trigger DynamoDB Streams, which can be processed by another Lambda function to perform further actions, such as replicating the changes to another database.
